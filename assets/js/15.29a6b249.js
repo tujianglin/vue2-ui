@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[15],{386:function(e,n,t){"use strict";t.r(n);var a={methods:{handleSearch(e){console.log(e)}}},c=t(20),l=Object(c.a)(a,(function(){var e=this.$createElement;return(this._self._c||e)("WMSearchInput",{on:{search:this.handleSearch}})}),[],!1,null,null,null);n.default=l.exports}}]);
