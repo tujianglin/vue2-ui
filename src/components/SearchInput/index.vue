@@ -1,15 +1,17 @@
 <template>
   <div class="search-keywords">
-    <el-input v-model="keywords" :placeholder="searchPlaceholder" v-bind="$props" clearable />
+    <el-input v-model="keywords" :placeholder="placeholder" v-bind="$props" clearable />
     <el-button class="search-btn" icon="el-icon-search" @click="handleClick" />
   </div>
 </template>
 
 <script>
   export default {
+    name: 'WMSearchInput',
     props: {
       placeholder: {
         type: String,
+        default: '',
       },
       defaultValue: String,
     },
@@ -17,14 +19,6 @@
       return {
         keywords: '',
       };
-    },
-    computed: {
-      searchPlaceholder() {
-        if (this.placeholder) {
-          return this.placeholder;
-        }
-        return this.$t('commonLang.filter_text');
-      },
     },
     watch: {
       defaultValue: {
@@ -45,9 +39,9 @@
   .search-keywords {
     display: flex;
     margin-left: 8px;
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--primary-color, #3b8e8e);
     border-radius: 2px;
-    background-color: var(--primary-color);
+    background-color: var(--primary-color, #3b8e8e);
     display: flex;
     align-items: center;
 
@@ -63,7 +57,7 @@
     .search-btn {
       min-height: initial;
       min-width: 30px;
-      background-color: var(--primary-color);
+      background-color: var(--primary-color, #3b8e8e);
       color: #fff;
       padding: 0;
       border: 0;

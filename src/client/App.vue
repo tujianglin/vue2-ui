@@ -38,7 +38,7 @@
           {
             type: 'selection',
             width: 50,
-            align: 'center'
+            align: 'center',
           },
           {
             prop: 'date',

@@ -34,7 +34,7 @@
   import TreeSelect from 'el-select-tree';
 
   export default {
-    name: 'WmSearch',
+    name: 'WMSearch',
     components: { TreeSelect },
     props: {
       option: {
@@ -94,7 +94,7 @@
   .wm-search {
     ::v-deep .el-form-item {
       margin-bottom: 0;
-      border: 1px solid var(--primary-color);
+      border: 1px solid var(--primary-color, #3b8e8e);
       border-radius: 2px;
       display: inline-flex;
       align-items: center;
@@ -105,7 +105,7 @@
       }
       .el-form-item__label {
         padding: 0 12px;
-        color: var(--primary-color);
+        color: var(--primary-color, #3b8e8e);
         font-size: 12px;
       }
 
