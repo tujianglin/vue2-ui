@@ -2877,6 +2877,20 @@ cosmiconfig@^5.0.0:
     js-yaml "^3.13.1"
     parse-json "^4.0.0"
 
+cps9.3-ui@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.npmjs.org/cps9.3-ui/-/cps9.3-ui-0.0.1.tgz#cdbe2b897721005035016c8ba776dca2eb4dd286"
+  integrity sha512-0a6lM4WkEpqdFcxYZt3Vzd1Cn9WHk+mjyJXL59sZH3xqISffTHwz4UkjBPMHr/SmSSKjT61t8utBykvFBjDYEw==
+  dependencies:
+    el-select-tree "^2.0.16"
+    element-ui "^2.15.12"
+    sortablejs "^1.15.0"
+    vue "2.6.14"
+    vue-i18n "^8.7.0"
+    vue-server-renderer "2.6.14"
+    vue-template-compiler "2.6.14"
+    vuepress "^1.9.8"
+
 create-ecdh@^4.0.0:
   version "4.0.4"
   resolved "https://registry.npmmirror.com/create-ecdh/-/create-ecdh-4.0.4.tgz#d6e7f4bffa66736085a0762fd3a632684dabcc4e"
