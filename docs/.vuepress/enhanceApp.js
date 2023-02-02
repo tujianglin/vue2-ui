@@ -1,11 +1,10 @@
 import ElementUI from 'element-ui';
-import VueI18n from 'vue-i18n';
 import 'element-ui/lib/theme-chalk/index.css';
-import { createUI } from '../../dist/ui.es';
 import '../../dist/style.css';
 
-export default ({ Vue }) => {
-  Vue.use(VueI18n);
-  Vue.use(createUI());
+export default async ({ Vue }) => {
   Vue.use(ElementUI);
+  await import('../../dist/ui.es').then(({ createUI }) => {
+    Vue.use(createUI());
+  })
 };

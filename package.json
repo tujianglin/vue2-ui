@@ -16,7 +16,7 @@
     "preview": "vite preview",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "deploy": "deploy.sh"
+    "deploy": "bash deploy.sh"
   },
   "devDependencies": {
     "async-validator": "1.11.5",
@@ -36,5 +36,6 @@
     "vue-server-renderer": "2.6.14",
     "vue-template-compiler": "2.6.14",
     "vuepress": "^1.9.8"
-  }
+  },
+  "homepage": "https://tujianglin.github.io/vue2-ui/"
 }
