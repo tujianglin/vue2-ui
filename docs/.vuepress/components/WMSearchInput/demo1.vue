@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <WMSearchInput @search="handleSearch"></WMSearchInput>
-  </div>
+  <WMSearchInput @search="handleSearch"></WMSearchInput>
 </template>
 
 <script>

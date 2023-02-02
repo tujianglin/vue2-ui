@@ -1,30 +1,30 @@
 <template>
-  <el-form ref="ruleForm" class="wm-search" :model="ruleForm" v-bind="omit(option, 'column', 'immediate')" v-on="omit($listeners, 'update')">
-    <el-form-item v-for="(item, index) in option.column" :key="index" :class="{ 'el-form-custom': item.type === 'custom' }" v-bind="omit(item, 'type', 'fieldOption')">
+  <el-form ref="ruleForm" class="wm-search" :model="ruleForm" v-bind="omit(option, 'columns', 'immediate')" v-on="omit($listeners, 'update')">
+    <el-form-item v-for="(item, index) in option.columns" :key="index" :class="{ 'el-form-custom': item.type === 'custom' }" v-bind="omit(item, 'type', 'fieldOption')">
       <!-- 单选框 -->
-      <el-radio-group v-if="item.type === 'radio'" v-bind="omit(item.fieldOption, 'dicData')" v-model="ruleForm[item.prop]" v-on="item.fieldOption.on">
+      <el-radio-group v-if="item.type === 'radio'" v-bind="omit(item.fieldOption, 'dicData')" v-model="ruleForm[item.prop]" v-on="item.fieldOption && item.fieldOption.on">
         <el-radio v-for="radio in item.fieldOption.dicData" :key="radio.value" v-bind="omit(radio, 'label', 'value')" :label="radio.value">
           {{ radio.label }}
         </el-radio>
       </el-radio-group>
       <!-- 多选框 -->
-      <el-checkbox-group v-else-if="item.type === 'checkbox'" v-bind="omit(item.fieldOption, 'dicData')" v-model="ruleForm[item.prop]" v-on="item.fieldOption.on">
+      <el-checkbox-group v-else-if="item.type === 'checkbox'" v-bind="omit(item.fieldOption, 'dicData')" v-model="ruleForm[item.prop]" v-on="item.fieldOption && item.fieldOption.on">
         <el-checkbox v-for="checkbox in item.fieldOption.dicData" :key="checkbox.value" v-bind="omit(checkbox, 'label', 'value')" :label="checkbox.value">
           {{ checkbox.label }}
         </el-checkbox>
       </el-checkbox-group>
       <!-- 下拉选择 -->
-      <el-select v-else-if="item.type === 'select'" v-bind="omit(item.fieldOption, 'dicData')" v-on="item.fieldOption.on" v-model="ruleForm[item.prop]">
+      <el-select v-else-if="item.type === 'select'" v-bind="omit(item.fieldOption, 'dicData')" v-on="item.fieldOption && item.fieldOption.on" v-model="ruleForm[item.prop]">
         <el-option v-for="select in item.fieldOption.dicData" :key="select.value" v-bind="select" />
       </el-select>
       <!-- 下拉数选择 -->
-      <TreeSelect v-else-if="item.type === 'treeSelect'" v-bind="item.fieldOption" v-on="item.fieldOption.on" v-model="ruleForm[item.prop]" />
+      <TreeSelect v-else-if="item.type === 'treeSelect'" v-bind="item.fieldOption" v-on="item.fieldOption && item.fieldOption.on" v-model="ruleForm[item.prop]" />
       <!-- 自定义 -->
       <template v-else-if="item.type === 'custom'">
         <slot :name="item.type"></slot>
       </template>
       <!-- input -->
-      <components v-else :is="`el-${item.type}`" v-bind="omit(item.fieldOption, 'dicData')" v-model="ruleForm[item.prop]" />
+      <components v-else :is="`el-${item.type}`" v-bind="omit(item.fieldOption, 'dicData')" v-on="item.fieldOption && item.fieldOption.on" v-model="ruleForm[item.prop]" />
     </el-form-item>
   </el-form>
 </template>
@@ -40,7 +40,7 @@
       option: {
         type: Object,
         default: () => ({
-          column: [],
+          columns: [],
         }),
       },
     },
@@ -52,13 +52,10 @@
     watch: {
       option: {
         handler(val) {
-          const { column = [] } = val;
+          const { columns = [] } = val;
           const resultObj = {};
-          column?.map((i) => {
+          columns?.map((i) => {
             switch (i.dataType) {
-              case 'string':
-                resultObj[i.prop] = i.defaultValue || '';
-                break;
               case 'array':
                 resultObj[i.prop] = i.defaultValue || [];
                 break;
@@ -66,7 +63,7 @@
                 resultObj[i.prop] = i.defaultValue || null;
                 break;
               default:
-                resultObj[i.prop] = '';
+                resultObj[i.prop] = i.defaultValue || '';;
                 break;
             }
           });
