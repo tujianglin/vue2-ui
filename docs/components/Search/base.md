@@ -22,6 +22,17 @@
 
 </Demo-index>
 
+## 自定义查询项
+
+<Demo-index>
+::: slot source
+<WMSearch-demo3></WMSearch-demo3>
+:::
+
+<<< @/docs/.vuepress/components/WMSearch/demo3.vue
+
+</Demo-index>
+
 ## Search Attributes
 
 | 参数   | 说明     | 类型   | 默认值 |

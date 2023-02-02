@@ -21,7 +21,7 @@
       <TreeSelect v-else-if="item.type === 'treeSelect'" v-bind="item.fieldOption" v-on="item.fieldOption && item.fieldOption.on" v-model="ruleForm[item.prop]" />
       <!-- 自定义 -->
       <template v-else-if="item.type === 'custom'">
-        <slot :name="item.type"></slot>
+        <slot :name="item.prop"></slot>
       </template>
       <!-- input -->
       <components v-else :is="`el-${item.type}`" v-bind="omit(item.fieldOption, 'dicData')" v-on="item.fieldOption && item.fieldOption.on" v-model="ruleForm[item.prop]" />
