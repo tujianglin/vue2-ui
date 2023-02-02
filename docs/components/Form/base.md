@@ -33,6 +33,17 @@
 
 </Demo-index>
 
+## 信息回显
+
+<Demo-index>
+::: slot source
+<WMForm-demo4></WMForm-demo4>
+:::
+
+<<< @/docs/.vuepress/components/WMForm/demo4.vue
+
+</Demo-index>
+
 ## Form Attributes
 
 | 参数           | 说明         | 类型   | 默认值 |
