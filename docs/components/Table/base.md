@@ -100,3 +100,7 @@
 | ------ | ------------ | ------------------------------------------ |
 | drag   | 拖拽开始事件 | -                                          |
 | drop   | 拖拽结束事件 | {target: 当前选中节点, list: 完成后的数据列表} |
+
+## 其他属性
+
+[element-ui](https://element.eleme.io/#/zh-CN/component/table)

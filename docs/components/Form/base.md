@@ -35,10 +35,10 @@
 
 ## Form Attributes
 
-| 参数           | 说明         | 类型   | 默认值        |
-| -------------- | ------------ | ------ | ------------- |
-| value(v-model) | 表单数据对象 | object | {}            |
-| option         | 表单配置     | object | {} |
+| 参数           | 说明         | 类型   | 默认值 |
+| -------------- | ------------ | ------ | ------ |
+| value(v-model) | 表单数据对象 | object | {}     |
+| option         | 表单配置     | object | {}     |
 
 ## Table Events
 
@@ -74,3 +74,7 @@
 | ------- | -------------------------- | ----- | ------ |
 | dicData | 数据字典值(下拉,单选,多选) | array | []     |
 | data    | 数据字典值(下拉树)         | array | []     |
+
+## 其他属性
+
+[element-ui](https://element.eleme.io/#/zh-CN/component/form)

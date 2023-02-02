@@ -1,5 +1,5 @@
 <template>
-  <WmTree :data="treeData"></WmTree>
+  <WmTree :data="treeData" searchShow placeholder="请输入"></WmTree>
 </template>
 
 <script>

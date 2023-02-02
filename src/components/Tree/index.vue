@@ -154,7 +154,7 @@
     }
 
     ::v-deep .el-tree-node.is-current > .el-tree-node__content {
-      background: var(--color-primary-light-8, '#d8e8e8');
+      background: var(--color-primary-light-8, #d8e8e8);
     }
 
     ::v-deep .el-tree-node__content {
