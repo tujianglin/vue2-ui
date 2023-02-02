@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "peacock9"; /* Project id 3178644 */
+  src: url('iconfont.woff2?t=1675309259243') format('woff2'),
+       url('iconfont.woff?t=1675309259243') format('woff'),
+       url('iconfont.ttf?t=1675309259243') format('truetype');
+}
+
+.peacock9 {
+  font-family: "peacock9" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-add-rectangle:before {
+  content: "\e811";
+}
+
+.icon-minus-rectangle:before {
+  content: "\e812";
+}
+
+.icon-eye:before {
+  content: "\e78f";
+}
+
+.icon-swap-right:before {
+  content: "\e8f1";
+}
+
+.icon-sousuo:before {
+  content: "\e759";
+}
+
+.icon-file-pdf:before {
+  content: "\e7b8";
+}
+
+.icon-file-image:before {
+  content: "\e7b7";
+}
+
+.icon-file:before {
+  content: "\e7bb";
+}
+
+.icon-file-zip:before {
+  content: "\e7bc";
+}
+
+.icon-plus-square:before {
+  content: "\e797";
+}
+
+.icon-delete:before {
+  content: "\e7c3";
+}
+
+.icon-download:before {
+  content: "\e7ef";
+}
+

@@ -10,7 +10,7 @@ module.exports = {
     {
       title: '组件',
       collapsable: false,
-      children: ['Table/base', 'Form/base', 'Search/base', 'SearchInput/base'],
+      children: ['Table/base', 'Form/base', 'Search/base', 'SearchInput/base', 'Tree/base'],
     },
   ],
 };

@@ -1,4 +1,7 @@
 import { forEach } from 'lodash';
+// iconfont
+import './assets/icon/iconfont.css'
+import './assets/icon/iconfont.js'
 
 const moduleFiles = import.meta.globEager('./components/**/*.vue');
 const components = [];
