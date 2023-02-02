@@ -1,0 +1,39 @@
+{
+  "name": "vite-project",
+  "version": "0.0.0",
+  "main": "./dist/ui.umd.js",
+  "module": "./dist/ui.es.d.js",
+  "exports": {
+    ".": {
+      "import": "./dist/ui.es.js",
+      "require": "./dist/ui.umd.js"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "devDependencies": {
+    "async-validator": "1.11.5",
+    "lodash": "^4.17.21",
+    "sass": "^1.32.13",
+    "sass-loader": "^8.0.2",
+    "vite": "^2.8.0",
+    "vite-plugin-vue2": "1.9.3",
+    "vue-eslint-parser": "^9.1.0"
+  },
+  "dependencies": {
+    "el-select-tree": "^2.0.16",
+    "element-ui": "^2.15.12",
+    "sortablejs": "^1.15.0",
+    "vue": "2.6.14",
+    "vue-i18n": "^9.2.2",
+    "vue-server-renderer": "2.6.14",
+    "vue-template-compiler": "2.6.14",
+    "vuepress": "^1.9.8"
+  }
+}
